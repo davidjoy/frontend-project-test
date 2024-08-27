@@ -1,29 +1,30 @@
 import { SiteConfig } from '@openedx/frontend-base';
 import './project.scss';
 
-import { ModuleTwo } from '@openedx/frontend-app-base-test';
+import { ModuleOne } from '@openedx/frontend-app-base-test';
 
 const config: SiteConfig = {
   apps: [
     {
-      appId: 'baseTest',
-      remoteUrl: 'http://localhost:8082/remoteEntry.js',
-      moduleId: 'ModuleOne',
+      appId: 'moduleOne',
+      component: ModuleOne,
       path: '/one/*',
     },
     {
-      appId: 'moduleTwo',
-      component: ModuleTwo,
+      appId: 'baseTest',
+      moduleId: 'ModuleTwo',
+      remoteUrl: 'http://localhost:8082/remoteEntry.js',
       path: '/two/*',
     },
     {
       appId: 'baseTestProject',
-      remoteUrl: 'http://localhost:8083/remoteEntry.js',
       moduleId: 'ModuleThree',
+      remoteUrl: 'http://localhost:8083/remoteEntry.js',
       path: '/three/*',
     },
     {
-      appId: 'moduleFour',
+      appId: 'externalSite',
+      moduleId: 'ModuleFour',
       url: 'http://localhost:8084/four',
     }
   ],
