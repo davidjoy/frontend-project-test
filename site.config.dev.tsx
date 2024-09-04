@@ -8,7 +8,7 @@ const config: SiteConfig = {
     {
       appId: 'moduleOne',
       component: ModuleOne,
-      path: '/one/*',
+      path: '/*',
     },
     {
       appId: 'baseTest',
